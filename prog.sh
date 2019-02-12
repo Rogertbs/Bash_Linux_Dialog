@@ -25,7 +25,7 @@ if [ -z "$nome" ] && [ -z "$idade" ] && [ -z "$tel" ]
 then
 dialog  --title 'Cadastro' --msgbox "Você não preencheu os campos" 0 0
 else 
-mysql --user=root --password=tbs123 crud <<EOF
+mysql --user=root --password=root crud <<EOF
 INSERT INTO client (nome, idade, telefone) values ('$nome', '$idade', '$tel');
 EOF
 fi
